@@ -1,0 +1,133 @@
+### Функции высшего порядка
+# def f(x):
+#     return x**2
+# print (f(4)) # выводит число 16
+
+# print(type(f)) # выводит тип функции <class 'function'> 
+
+# def calk1(a, b):
+#     return a+b
+
+# def calk2(a, b):
+#     return a*b
+
+# def math (op, x, y): #  в функцию math передаем функцию со значением (х), op=calk
+#      print(op(x, y))
+
+# math (calk1, 5, 45) # выведит число 50 (а+b)
+# math (calk2, 5, 5) # выведит число 25 (а*b)
+
+# calk1=lambda a, b: a+b
+# math (calk1, 5, 45) # выводит число 50
+
+#math (lambda a, b: a+b, 5, 45) # заменяет значение calk1 при выводе функции math
+
+### Выводит список их четных чисел и их квадраты  в виде кортежа
+#data=[1, 2, 3, 5, 8, 15, 23, 38] 
+# res=list()
+# for i in data:
+#     if i%2==0:
+#         res.append((i, i**2))
+# print(res)
+
+# def select(f, col):
+#     return [f(x) for x in col]
+
+# def where (f, col):
+#     return [x for x in col if f(x)]
+# data=[1, 2, 3, 5, 8, 15, 23, 38]
+# res=select (int, data)
+# print(res)
+# res=where(lambda x: x%2==0, res)
+# print(res)
+# res=list(select(lambda x: (x,x**2), res))
+# print(res) 
+
+### Выводит 2 списка: первый числа от 1 до 20 и второй этот же список со значением +10
+# list_1= [x for x in range(1, 20)]
+# print(list_1)
+# list_1=list(map(lambda x: x+10, list_1))
+# print(list_1)
+
+### Выводи строку в виде списка целых чисел 
+#data=' 15 156 55 98 1 55'
+# # print(data)
+# # data=data.split()
+# # print(data)
+# data=list(map(int, data.split()))
+# print(data)
+
+### Выводит список из четных чисел и квадраты их значений
+# def where (f, col):
+#     return [x for x in col if f(x)]
+# data=[1, 2, 3, 5, 8, 15, 23, 38]
+# res=map (int, data)
+# print(res)
+# res=where(lambda x: x%2==0, res)
+# print(res)
+# res=list(map(lambda x: (x,x**2), res))
+# print(res) 
+
+### Функция filter
+# data=[22, 4, 567, 32, 65, 11, 175]
+# res=list(filter(lambda x: x%10==5, data))
+# print(res)
+
+# data=[1, 2, 3, 5, 8, 15, 23, 38]
+# res=map (int, data)
+# res=filter(lambda x: x%2==0, res)
+# res=list(map(lambda x: (x,x**2), res))
+# print(res) 
+
+### Функция ZIP() (пробегает по минимальному входящему набору т.е выведет первые 5 зачений обеих списков в виде отдельного списка)
+# user=['user1', 'user2', 'user3', 'user4', 'user5']
+# ids=[4, 5, 6, 7, 8, 9,]
+# salary=[112, 134, 435]
+# data=list(zip(user, ids, salary))
+# print(data)
+
+### Функция ENUMERATE() - применяется к итерируемому объекту и возвращает новый итератор с кортежами из индекса и элементов входных данных
+# user=['user1', 'user2', 'user3', 'user4', 'user5']
+# data=list(enumerate(user))
+# print(data) # Вывод [(0,'user1'),(1, 'user2'  и т.д.))]
+
+### Файлы
+# a - открытие для добавления данных (добавление данных в файл, если его нет он его создаст)
+# r - открытие для чтения данных(чтение данных из файла, если его нет выдаст ошибку)
+# W - открытие для записи данных(позволяет записывать данные (перезаписывет) и создавать файл если его не существует)
+# w+ - позволяет открывать файл для записи и читать из его (если фал не существует, он будет создан)
+# r+ - позволяет открывать файл для чтения и дописывать в его (если фал не существует, он выдаст ошибку)
+
+## Режим создания и записи
+# color=['red\n', 'blue\n', 'green\n'] 
+# data=open('file_txt', 'a', encoding='utf-8') # здесь указываем режим в котором будем работать
+# data.writelines(color) # разделителей не будет
+# data.close()
+
+## Без режима открытия и закрытия файла
+# with open('file_txt', 'w', encoding='utf-8') as data: # здесь открываем файл в котором будем работать с именем data.
+#     data.write('line1\n') 
+#     data.write('line2\n')
+# print(2) 
+
+## Режим чтения
+# path='file_txt'
+# data=open('file_txt', 'r')
+# for line in data:
+#     print(line)
+# data.close() # выводит содержимое файла .txt
+
+#Модуль os -определяет множество функций для работы с операционной системой
+# os.chdir(path)- смена текущей директории.
+#     import os
+#     os.chdir('C:\Users\User\Desktop\Lesson.Py')
+# os.getcwd() - текущая рабочая директория
+#     import os
+#     print(os.getcwd()) # C:\Users\User\Desktop\Lesson.Py
+# os.path - является вложенным модулем в модуль OS и реализует полезные функции для работы с путями, такие как:
+#     os.path.basename(path) - базовое имя пути.
+#     import os
+#     print(os.path.basename(c:/Users/User/Desktop/Lesson.Py/Les2.py)). # Выдаст только имя файла Les2.py
+#     os.path.abspath(path) -  возращает нормализованный абсолютный путь.
+#     import os
+#     print(os.path.abspath('Les2.py')) модуль показывает путь до этого файла "c:/Users/User/Desktop/Lesson.Py/Les2.py"
