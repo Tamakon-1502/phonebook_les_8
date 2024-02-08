@@ -112,3 +112,57 @@
 #         return False
 #     return palindrom (str[1:-1])
 # print(palindrom('шалаш'))
+
+# def greet(name):
+#     print(f"Привет, {name}!")
+
+# greet("Анна")
+
+#Напишите функцию calculate_average, которая принимает список чисел в качестве аргумента и возвращает среднее арифметическое этих чисел:
+# def calculate_avarage (numbers):
+#     if len(numbers)==0:
+#         return 0
+#     total= sum(numbers)
+#     avarage=total/len(numbers)
+#     return avarage
+# numbers =[21, 43, 29,54, 12]
+# avg = calculate_avarage(numbers)
+# print (avg)
+
+#Напишите функцию print_square, которая принимает число в качестве аргумента и выводит на экран его квадрат, но ничего не возвращает:
+
+# def print_square (number):
+#     square = number**2
+#     print(f'Квадрат числа {number} равен {square}')
+# print_square(12)
+
+#Вы также можете создать функцию, которая принимает как неименованные, так и именованные параметры:
+# def comb_func(arg1, arg2, *args, **kwargs):
+#     print(f"arg1: {arg1}")
+#     print(f"arg2: {arg2}")
+#     print(f"Дополнительные аргументы: {args}")
+#     print(f"Именованные аргументы: {kwargs}")
+#comb_func(1, 2, 3, 4, 5, name="Анна", age=30)
+
+#Вы также можете создать функцию, которая принимает как  именованные параметры:
+# def info_user(**kwargs):
+#     for key, value in kwargs.items():
+#         print(f"{key}: {value}")
+
+# info_user(name="Анна", age=30, city="Москва")
+
+#Напишите функцию сумма_двух_чисел, которая принимает два аргумента и возвращает их сумму.
+# def sum_two_number(a, b):
+#     return a+b
+# print(sum_two_number(5, 6))
+
+#Напишите функцию сумма_произвольных_чисел, которая принимает произвольное количество чисел и возвращает их сумму
+# def sum_number(*args):
+#     return sum(args)
+# result= sum_number(3, 1, 2)
+# print(f'Сумма значений:', result)
+
+#Напишите функцию приветствие, которая принимает имя и возраст, где возраст является необязательным аргументом со значением по умолчанию.
+# def privetsvie (name, age=25):
+#     print(f' Привет: {name}, тебе {age} лет')
+# privetsvie ('Роман', 'больше 40')

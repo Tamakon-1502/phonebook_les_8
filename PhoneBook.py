@@ -1,4 +1,4 @@
-#Программа про работу с телефонным справочником.
+#Программа "телефонный справочник".
 def work_with_phonebook():
     print('Телефонный справочник:')
     stop='No'
@@ -57,6 +57,5 @@ def write_txt(filename , Phone_book):
             for v in Phone_book[i].values():
                 s+=v+','
     phout.write(f'{s[:-1]}\n')
-
 work_with_phonebook()
 

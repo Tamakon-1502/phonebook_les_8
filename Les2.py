@@ -74,3 +74,38 @@
 #         print(bukva,'znak')
 #     s=s[1:]
 
+#Високосный или нет введенный год.
+# year=int(input('Ведите год в формате YYYY:'))
+# if year % 4 !=0 or year % 100 == 0 and year % 400 != 0:
+#     print('Обычный год')
+# else:
+#     print('Високосный год')
+
+# num=64
+# name='Bob'
+# if num>30:
+#     if num <50:
+#         print('Вариант 1')
+#     elif name > 'Markus':
+#         print('Вариант 2')
+#     else:
+#         print('Вариант 3')
+# elif name < 'Markus':
+#     print('Вариант 4')
+# elif num != 42:
+#     print('Вариант 5')
+# else:
+#     print('Вариант 6')
+
+# Задача про пингвинов
+import random
+lst = ['robot'] * 10
+lst += ['human'] * 10
+random.shuffle(lst)
+data = pd.DataFrame({'whoAmI':lst})
+data.head(100)
+for i in lst:
+    if i=='robot':
+        print('0')
+else:
+    print('1')
