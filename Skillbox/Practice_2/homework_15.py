@@ -153,7 +153,7 @@
 # print(finish_list)# список из неотсортированных четных чисел
 #
 # while finish_list:
-#     print(finish_list.pop(), end=' ')# Вывод четных чисел в обратном порядке
+#     print(finish_list.pop(), end=' ')# Вывод четных чисел в обратном порядке.
 #
 #
 #
