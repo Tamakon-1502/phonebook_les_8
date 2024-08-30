@@ -132,7 +132,7 @@
 # start_list = [1, 4, -3, 0, 10]
 # sort_list = []
 # print('Изначальный список:', start_list)# можно использовать такой вывод,
-# #a можно объявить переменную и работать сней,
+# #a можно объявить переменную и работать с ней,
 # # чтобы ссылка на start_list не изменялась.
 #
 # for i in range(len(start_list)):
@@ -141,19 +141,32 @@
 #             start_list[curr], start_list[i] = start_list[i], start_list[curr]
 #     sort_list.append(start_list[i])
 # print('Отсортированный список:', sort_list)
+
+
+## 2 Сортировка без создания дополнительного списка. Замена элементов внутри введенного списка.
+
+# def selection_sort(my_list):
+#     for i_mn in range(len(my_list)):
+#         for curr in range(i_mn, len(my_list)):
+#             if my_list[curr] < my_list[i_mn]:
+#                 my_list[curr], my_list[i_mn] = my_list[i_mn], my_list[curr]
 #
+# nums = [4, 6, 9, 2, 11, 8, 3]
+# selection_sort(nums)
+# print(nums)
+# #
 # # Задание 9. Обратный анализ чётных чисел
-#
-# numbers = list(map(int, input("Введите числа через пробел: ").split()))
-# finish_list = []
-#
-# for number in numbers:
-#     if number % 2 == 0:
-#         finish_list.append(number)
-# print(finish_list)# список из неотсортированных четных чисел
-#
-# while finish_list:
-#     print(finish_list.pop(), end=' ')# Вывод четных чисел в обратном порядке.
+
+numbers = list(map(int, input("Введите числа через пробел: ").split()))
+finish_list = []
+
+for number in numbers:
+    if number % 2 == 0:
+        finish_list.append(number)
+print(finish_list)# список из неотсортированных четных чисел
+
+while finish_list:
+    print(finish_list.pop(), end=' ')# Вывод четных чисел в обратном порядке.
 #
 #
 #
